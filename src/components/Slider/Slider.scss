@@ -1,0 +1,51 @@
+.Slider {
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+  }
+
+  .wrapper {
+    height: 100%;
+  }
+
+  .slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .img-container {
+    height: 100%;
+    flex: 1;
+  }
+
+  .img-container img {
+    height: 80%;
+  }
+
+  .info-container {
+    flex: 1;
+  }
+
+  .arrow {
+    width: 50px;
+    height: 50px;
+    background-color: #fff7f7;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .arrow.arrow-left {
+    left: 10px;
+  }
+
+  .arrow.arrow-right {
+    right: 10px;
+  }
+}
