@@ -1,5 +1,7 @@
+import Home from "./components/pages/Home/Home";
+
 const App = () => {
-  return <div>hello</div>;
+  return <Home />;
 };
 
 export default App;
