@@ -3,7 +3,7 @@ import ProductList from "./components/pages/ProductList/ProductList";
 import ProductPage from "./components/pages/ProductPage/ProductPage";
 
 const App = () => {
-  return <ProductList />;
+  return <ProductPage />;
 };
 
 export default App;
