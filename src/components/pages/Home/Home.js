@@ -9,8 +9,8 @@ import Footer from "../../Footer/Footer";
 const Home = () => {
   return (
     <div>
-      <Announcement />
       <Navbar />
+      <Announcement />
       <Slider />
       <Categories />
       <Products />
