@@ -3,6 +3,7 @@ import Announcement from "../../Announcement/Announcement";
 import Slider from "../../Slider/Slider";
 import Categories from "../../Categories/Categories";
 import Products from "../../Products/Products";
+import Newsletter from "../../Newsletter/Newsletter";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Slider />
       <Categories />
       <Products />
+      <Newsletter />
     </div>
   );
 };
