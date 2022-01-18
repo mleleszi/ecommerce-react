@@ -1,13 +1,11 @@
 import Navbar from "../../Navbar/Navbar";
 import Announcement from "../../Announcement/Announcement";
-import Slider from "../../Slider/Slider";
-import Categories from "../../Categories/Categories";
-import Products from "../../Products/Products";
 import Newsletter from "../../Newsletter/Newsletter";
 import Footer from "../../Footer/Footer";
 import { useEffect } from "react";
+import "./NotFound.scss";
 
-const Home = () => {
+const NotFound = () => {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -16,13 +14,11 @@ const Home = () => {
     <div>
       <Navbar />
       <Announcement />
-      <Slider />
-      <Categories />
-      <Products />
+      <h1 className="NotFound">404 Not Found</h1>
       <Newsletter />
       <Footer />
     </div>
   );
 };
 
-export default Home;
+export default NotFound;

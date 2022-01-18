@@ -28,9 +28,20 @@
     align-items: flex-end;
     justify-content: center;
     transition: all 1s ease;
+
+    .link {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:visited {
+        color: black;
+      }
+    }
   }
 
-  .info:hover{
+  .info:hover {
     opacity: 1;
   }
 

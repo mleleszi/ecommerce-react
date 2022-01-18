@@ -19,6 +19,14 @@
   .center {
     flex: 1;
     text-align: center;
+
+    .link{
+      text-decoration: none;
+
+      &:visited{
+        color:black;
+      }
+    }
   }
 
   .center h1 {

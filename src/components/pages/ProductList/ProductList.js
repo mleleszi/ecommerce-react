@@ -4,8 +4,13 @@ import Newsletter from "../../Newsletter/Newsletter";
 import Footer from "../../Footer/Footer";
 import Products from "../../Products/Products";
 import "./ProductList.scss";
+import { useEffect } from "react";
 
 const ProductList = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <div>
       <Navbar />
