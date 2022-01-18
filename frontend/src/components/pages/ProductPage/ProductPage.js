@@ -5,8 +5,13 @@ import Footer from "../../Footer/Footer";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import "./ProductPage.scss";
+import { useEffect } from "react";
 
 const ProductPage = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <div>
       <Navbar />
