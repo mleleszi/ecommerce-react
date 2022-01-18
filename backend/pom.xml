@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.2</version>
+        <version>2.5.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
@@ -53,6 +53,19 @@
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.10.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.10.3</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.10.3</version>
         </dependency>
@@ -67,6 +80,7 @@
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -90,10 +104,10 @@
                             <language>spring</language>
                             <output>${project.build.directory}/generated-sources/</output>
                             <generateSupportingFiles>false</generateSupportingFiles>
-                            <apiPackage>com.example.ecommerce.api</apiPackage>
-                            <modelPackage>com.example.ecommerce.models</modelPackage>
+                            <apiPackage>com.example.ecommerce_backend.api</apiPackage>
+                            <modelPackage>com.example.ecommerce_backend.models</modelPackage>
                             <configOptions>
-                                <interfaceOnly>true</interfaceOnly>
+
                             </configOptions>
                         </configuration>
                     </execution>

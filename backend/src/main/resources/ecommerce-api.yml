@@ -29,7 +29,6 @@ paths:
 
         "404":
           description: not ok
-          content: { }
 
 components:
   schemas:
