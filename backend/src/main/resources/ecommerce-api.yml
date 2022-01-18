@@ -1,0 +1,62 @@
+openapi: 3.0.0
+
+info:
+  version: 0.0.1
+  title: ecommerce service
+  description: ecommerce service
+
+tags:
+  - name: "Product"
+
+paths:
+
+  /products:
+    get:
+      summary: get all products
+      tags:
+        - "Product"
+      description: get all products
+      operationId: getAllProducts
+      responses:
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+
+        "404":
+          description: not ok
+          content: { }
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        desc:
+          type: string
+        price:
+          type: number
+          multipleOf: 0.01
+        stock:
+          type: integer
+        img_url:
+          type: string
+        color:
+          type: array
+          items:
+            type: string
+        size:
+          type: array
+          items:
+            type: string
+
+
+

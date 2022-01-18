@@ -86,12 +86,12 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/book-api.yml</inputSpec>
+                            <inputSpec>${project.basedir}/src/main/resources/ecommerce-api.yml</inputSpec>
                             <language>spring</language>
                             <output>${project.build.directory}/generated-sources/</output>
                             <generateSupportingFiles>false</generateSupportingFiles>
-                            <apiPackage>com.example.openapi.api</apiPackage>
-                            <modelPackage>com.example.openapi.models</modelPackage>
+                            <apiPackage>com.example.ecommerce.api</apiPackage>
+                            <modelPackage>com.example.ecommerce.models</modelPackage>
                             <configOptions>
                                 <interfaceOnly>true</interfaceOnly>
                             </configOptions>
