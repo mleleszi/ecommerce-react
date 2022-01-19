@@ -6,11 +6,27 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import "./ProductPage.scss";
 import { useEffect } from "react";
+import {getAllProducts} from "../../../api/Product";
+import {useQuery} from "react-query";
+import {useLocation} from "react-router-dom"
+import queryString from "query-string";
 
 const ProductPage = () => {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+
+  const { search } = useLocation();
+  const { id } = queryString.parse(search);
+
+  const {data, status} = useQuery("products", getAllProducts);
+  console.log(data);
+
+  if(status === "loading")
+    return <div>Loading...</div>
+
+  if(status === "error")
+    return <div>Error...</div>
 
   return (
     <div>
@@ -18,19 +34,14 @@ const ProductPage = () => {
       <Announcement />
       <div className="ProductPage">
         <div className="img-container">
-          <img src="https://i.ibb.co/S6qMxwr/jean.jpg" alt="" />
+          <img src={data[id].img_url} alt="" />
         </div>
         <div className="info-container">
-          <h1 className="title">Denim Jumpsuit</h1>
+          <h1 className="title">{data[id].name}</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-            accusantium ad adipisci alias amet atque commodi earum harum illum,
-            impedit in inventore libero modi nobis non odit officiis porro quia
-            quibusdam rem repudiandae rerum saepe tempora totam, ullam voluptas
-            voluptates! Consectetur ea expedita illum ipsum molestiae nemo quos,
-            tenetur voluptate.
+            {data[id].desc}
           </p>
-          <span className="price">$20</span>
+          <span className="price">{data[id].price}</span>
 
           <div className="filter-container">
             <div className="filter">
