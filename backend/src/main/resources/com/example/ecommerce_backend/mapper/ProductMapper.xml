@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.ecommerce_backend.mapper.ProductMapper" >
+
+    <resultMap type="com.example.ecommerce_backend.models.Product" id="productMap">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="desc" column="desc"/>
+        <result property="price" column="price"/>
+        <result property="stock" column="stock"/>
+        <result property="imgUrl" column="img_url"/>
+
+        <collection property="color" javaType="ArrayList" column="id" ofType="java.lang.String" select="getColorsByProduct"/>
+        <collection property="size" javaType="ArrayList" column="id" ofType="java.lang.String" select="getSizesByProduct"/>
+
+    </resultMap>
+
+   <select id="getAllProducts" resultMap="productMap">
+       SELECT * FROM product;
+   </select>
+
+
+    <select id="getColorsByProduct" resultType="java.lang.String">
+        SELECT DISTINCT color.color FROM color
+            INNER JOIN product_color ON product.id = product_color.pid
+            INNER JOIN product ON product_color.pid = product.id
+        WHERE product.id = #{id};
+    </select>
+
+    <select id="getSizesByProduct" resultType="java.lang.String">
+        SELECT size.size FROM size
+            INNER JOIN product_size on size.id = product_size.sid
+            INNER JOIN product on product_size.pid = product.id
+        WHERE product.id = #{id};
+    </select>
+
+</mapper>
+
+
+
