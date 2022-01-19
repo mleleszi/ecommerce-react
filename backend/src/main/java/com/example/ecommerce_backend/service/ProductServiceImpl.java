@@ -20,23 +20,6 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> getAllProducts() {
-        List<Product> productList = new ArrayList();
-
-        Product product = new Product();
-
-        product.setId(1);
-        product.setName("Jean");
-        product.setDesc("this is a description");
-        product.setPrice(BigDecimal.valueOf(24.99));
-        product.setStock(5);
-        product.setImgUrl("https://i.ibb.co/cXFnLLV/3.png");
-        product.setColor(Arrays.asList("blue", "red", "black"));
-        product.setSize(Arrays.asList("XS", "S", "M"));
-
-        productList.add(product);
-
-        return productList;
-
-        //return productMapper.getAllProducts();
+        return productMapper.getAllProducts();
     }
 }
