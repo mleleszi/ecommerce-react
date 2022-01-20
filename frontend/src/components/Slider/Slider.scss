@@ -20,14 +20,14 @@
     cursor: pointer;
     opacity: 0.5;
     z-index: 2;
-  }
 
-  .arrow.arrow-left {
-    left: 10px;
-  }
+    &.arrow-left {
+      left: 10px;
+    }
 
-  .arrow.arrow-right {
-    right: 10px;
+    &.arrow-right {
+      right: 10px;
+    }
   }
 
   .wrapper {
@@ -46,32 +46,32 @@
   .img-container {
     height: 100%;
     flex: 1;
-  }
 
-  .img-container img {
-    height: 80%;
+    img {
+      height: 80%;
+    }
   }
 
   .info-container {
     flex: 1;
     padding: 50px;
-  }
 
-  .info-container h1 {
-    font-size: 70px;
-  }
+    h1 {
+      font-size: 70px;
+    }
 
-  .info-container p {
-    margin: 50px 0px;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 3px;
-  }
+    p {
+      margin: 50px 0px;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 3px;
+    }
 
-  .info-container button {
-    padding: 10px;
-    font-size: 20px;
-    background-color: transparent;
-    cursor: pointer;
+    button {
+      padding: 10px;
+      font-size: 20px;
+      background-color: transparent;
+      cursor: pointer;
+    }
   }
 }

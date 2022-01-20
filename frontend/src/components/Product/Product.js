@@ -9,13 +9,13 @@ const Product = ({ item }) => {
     <div className="Product">
       <img src={item.img_url} alt="" />
       <div className="info">
-        <Link to="/product" className="link">
+        <Link to={`/product?id=${item.id}`} className="link">
           <ShoppingCartOutlinedIcon />
         </Link>
         <Link to={`/product?id=${item.id}`} className="link">
           <SearchOutlinedIcon />
         </Link>
-        <Link to="/product" className="link">
+        <Link to={`/product?id=${item.id}`} className="link">
           <FavoriteBorderOutlinedIcon />
         </Link>
       </div>

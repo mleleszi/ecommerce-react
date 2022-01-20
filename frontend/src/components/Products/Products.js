@@ -1,6 +1,5 @@
 import "./Products.scss";
 import Product from "../Product/Product";
-import { popularProducts } from "../../data";
 import {useQuery} from "react-query";
 import {getAllProducts} from "../../api/Product";
 
