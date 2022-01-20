@@ -6,7 +6,7 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import "./ProductPage.scss";
 import { useEffect } from "react";
-import {getAllProducts} from "../../../api/Product";
+import {getProductById} from "../../../api/Product";
 import {useQuery} from "react-query";
 import {useLocation} from "react-router-dom"
 import queryString from "query-string";
@@ -19,14 +19,14 @@ const ProductPage = () => {
   const { search } = useLocation();
   const { id } = queryString.parse(search);
 
-  const {data, status} = useQuery("products", getAllProducts);
+  const {data, status} = useQuery(id, getProductById);
   console.log(data);
 
   if(status === "loading")
     return <div>Loading...</div>
 
   if(status === "error")
-    return <div>Error...</div>
+    return <div>Error fetching data...</div>
 
   return (
     <div>
@@ -34,41 +34,32 @@ const ProductPage = () => {
       <Announcement />
       <div className="ProductPage">
         <div className="img-container">
-          <img src={data[id].img_url} alt="" />
+          <img src={data.img_url} alt="" />
         </div>
         <div className="info-container">
-          <h1 className="title">{data[id].name}</h1>
+          <h1 className="title">{data.name}</h1>
           <p>
-            {data[id].desc}
+            {data.desc}
           </p>
-          <span className="price">{data[id].price}</span>
+          <span className="price">{data.price}</span>
 
           <div className="filter-container">
             <div className="filter">
               <span className="title">Color</span>
-              <div className="color black"></div>
-              <div className="color darkblue"></div>
-              <div className="color grey"></div>
+              {data.color.map((color) => (
+                  <div key={color} className={`color ${color}`}></div>
+              ))}
+
             </div>
 
             <div className="filter">
               <span className="title">Size</span>
               <select name="size" id="">
-                <option value="XS" className="">
-                  XS
-                </option>
-                <option value="S" className="">
-                  S
-                </option>
-                <option value="M" className="">
-                  M
-                </option>
-                <option value="L" className="">
-                  L
-                </option>
-                <option value="XL" className="">
-                  XL
-                </option>
+
+
+                {data.size.map(size => (
+                    <option value={size}>{size}</option>
+                ))}
               </select>
             </div>
           </div>
