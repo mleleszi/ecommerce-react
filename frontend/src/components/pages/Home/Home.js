@@ -8,11 +8,7 @@ import Footer from "../../Footer/Footer";
 import { useEffect } from "react";
 
 const Home = () => {
-  useEffect(() => {
-    window.scroll(0, 0);
-  }, []);
-
-  return (
+    return (
     <div>
       <Navbar />
       <Announcement />
