@@ -19,6 +19,11 @@
        SELECT * FROM product;
    </select>
 
+    <select id="getProductById" resultMap="productMap">
+        SELECT * FROM product
+        WHERE id = #{id};
+    </select>
+
 
     <select id="getColorsByProduct" resultType="java.lang.String">
         SELECT DISTINCT color.color FROM color
@@ -33,6 +38,9 @@
             INNER JOIN product on product_size.pid = product.id
         WHERE product.id = #{id};
     </select>
+
+
+
 
 </mapper>
 

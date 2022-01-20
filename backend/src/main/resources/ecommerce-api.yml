@@ -10,6 +10,27 @@ tags:
 
 paths:
 
+  /product/{id}:
+    parameters:
+      - name: id
+        description: product id
+        schema:
+          type: integer
+        in: path
+        required: true
+    get:
+      summary: get product by id
+      operationId: getProductByid
+      responses:
+        "200":
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+
+
+
   /products:
     get:
       summary: get all products
@@ -56,6 +77,7 @@ components:
           type: array
           items:
             type: string
+
 
 
 

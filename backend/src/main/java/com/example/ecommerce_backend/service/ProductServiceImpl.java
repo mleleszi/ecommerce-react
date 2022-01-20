@@ -8,6 +8,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -21,5 +22,13 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> getAllProducts() {
         return productMapper.getAllProducts();
+    }
+
+    @Override
+    public Product getProductById(Integer id) {
+        Optional<Product> optionalProduct = productMapper.getProductById(id);
+        if(optionalProduct.isEmpty())
+            throw new NoSuchProductException(id);
+        return optionalProduct.get();
     }
 }

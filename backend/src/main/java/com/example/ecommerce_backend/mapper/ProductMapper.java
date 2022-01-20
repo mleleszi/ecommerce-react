@@ -7,9 +7,11 @@ import org.apache.ibatis.annotations.Select;
 import org.mybatis.spring.annotation.MapperScan;
 
 import java.util.List;
+import java.util.Optional;
 
 @Mapper
 @MapperScan
 public interface ProductMapper{
     List<Product> getAllProducts();
+    Optional<Product> getProductById(Integer id);
 }

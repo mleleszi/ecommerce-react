@@ -106,7 +106,7 @@
                             <apiPackage>com.example.ecommerce_backend.api</apiPackage>
                             <modelPackage>com.example.ecommerce_backend.models</modelPackage>
                             <configOptions>
-
+                                <interfaceOnly>true</interfaceOnly>
                             </configOptions>
                         </configuration>
                     </execution>
