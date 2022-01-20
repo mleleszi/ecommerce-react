@@ -38,17 +38,17 @@ VALUES (8, 'Product 8',
 
 
 INSERT INTO Color
-VALUES (1, 'Red');
+VALUES (1, 'red');
 INSERT INTO Color
-VALUES (2, 'Green');
+VALUES (2, 'green');
 INSERT INTO Color
-VALUES (3, 'Blue');
+VALUES (3, 'blue');
 INSERT INTO Color
-VALUES (4, 'Black');
+VALUES (4, 'black');
 INSERT INTO Color
-VALUES (5, 'White');
+VALUES (5, 'white');
 INSERT INTO Color
-VALUES (6, 'Yellow');
+VALUES (6, 'yellow');
 
 
 
@@ -78,7 +78,7 @@ VALUES (2, 2);
 INSERT INTO product_color
 VALUES (2, 3);
 INSERT INTO product_color
-VALUES (3, 5);
+VALUES (3, 4);
 INSERT INTO product_color
 VALUES (3, 5);
 INSERT INTO product_color
@@ -123,41 +123,35 @@ VALUES (2, 1);
 INSERT INTO product_size
 VALUES (3, 1);
 INSERT INTO product_size
-VALUES (1, 2);
+VALUES (4, 1);
 INSERT INTO product_size
 VALUES (2, 2);
 INSERT INTO product_size
 VALUES (3, 2);
 INSERT INTO product_size
-VALUES (1, 3);
+VALUES (4, 2);
 INSERT INTO product_size
-VALUES (2, 3);
+VALUES (4, 3);
 INSERT INTO product_size
-VALUES (3, 3);
+VALUES (5, 3);
 INSERT INTO product_size
 VALUES (1, 4);
 INSERT INTO product_size
-VALUES (2, 4);
-INSERT INTO product_size
-VALUES (3, 4);
-INSERT INTO product_size
 VALUES (1, 5);
 INSERT INTO product_size
-VALUES (2, 5);
+VALUES (4, 5);
 INSERT INTO product_size
-VALUES (3, 5);
-INSERT INTO product_size
-VALUES (1, 6);
+VALUES (5, 5);
 INSERT INTO product_size
 VALUES (2, 6);
 INSERT INTO product_size
 VALUES (3, 6);
 INSERT INTO product_size
+VALUES (5, 6);
+INSERT INTO product_size
 VALUES (1, 7);
 INSERT INTO product_size
-VALUES (2, 7);
-INSERT INTO product_size
-VALUES (3, 7);
+VALUES (4, 7);
 INSERT INTO product_size
 VALUES (1, 8);
 INSERT INTO product_size
